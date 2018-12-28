@@ -84,8 +84,8 @@ When we run the program now, we get this:
 
 ```text
 $ cargo run
-   Compiling variables v0.1.0 (file:///projects/variables)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.30 secs
+   Compiling variables v0.1.0 (/projects/variables)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
      Running `target/debug/variables`
 The value of x is: 5
 The value of x is: 6
@@ -179,8 +179,8 @@ program, it will output the following:
 
 ```text
 $ cargo run
-   Compiling variables v0.1.0 (file:///projects/variables)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31 secs
+   Compiling variables v0.1.0 (/projects/variables)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
      Running `target/debug/variables`
 The value of x is: 12
 ```
@@ -197,7 +197,7 @@ change the type of the value but reuse the same name. For example, say our
 program asks a user to show how many spaces they want between some text by
 inputting space characters, but we really want to store that input as a number:
 
-```rust
+```rust,ignore
 let spaces = "   ";
 let spaces = spaces.len();
 ```
