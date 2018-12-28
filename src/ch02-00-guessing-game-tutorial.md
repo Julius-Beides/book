@@ -291,13 +291,14 @@ If you don’t call `expect`, the program will compile, but you’ll get a warni
 ```text
 $ cargo build
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-warning: unused `std::result::Result` which must be used
+warning: unused `std::result::Result` that must be used
   --> src/main.rs:10:5
    |
 10 |     io::stdin().read_line(&mut guess);
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |
    = note: #[warn(unused_must_use)] on by default
+   = note: this `Result` may be an `Err` variant, which should be handled
 ```
 
 Rust warns that you haven’t used the `Result` value returned from `read_line`,
