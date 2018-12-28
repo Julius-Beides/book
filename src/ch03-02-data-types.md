@@ -377,8 +377,8 @@ Running this code using `cargo run` produces the following result:
 
 ```text
 $ cargo run
-   Compiling arrays v0.1.0 (file:///projects/arrays)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31 secs
+   Compiling arrays v0.1.0 (/projects/arrays)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
      Running `target/debug/arrays`
 thread 'main' panicked at 'index out of bounds: the len is 5 but the index is
  10', src/main.rs:5:19

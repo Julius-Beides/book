@@ -40,8 +40,8 @@ should see the following output:
 
 ```text
 $ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.28 secs
+   Compiling functions v0.1.0 (/projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.28s
      Running `target/debug/functions`
 Hello, world!
 Another function.
@@ -80,8 +80,8 @@ Try running this program; you should get the following output:
 
 ```text
 $ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.21 secs
+   Compiling functions v0.1.0 (/projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.21s
      Running `target/debug/functions`
 The value of x is: 5
 ```
@@ -123,8 +123,8 @@ run`:
 
 ```text
 $ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31 secs
+   Compiling functions v0.1.0 (/projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
      Running `target/debug/functions`
 The value of x is: 5
 The value of y is: 6
@@ -178,14 +178,14 @@ When you run this program, the error you’ll get looks like this:
 
 ```text
 $ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-error: expected expression, found statement (`let`)
- --> src/main.rs:2:14
-  |
-2 |     let x = (let y = 6);
-  |              ^^^
-  |
-  = note: variable declaration using `let` is a statement
+   Compiling functions v0.1.0 (/projects/functions)
+error: expected expression, found statement (`let`)          
+ --> src/main.rs:2:14                                        
+  |                                                          
+2 |     let x = (let y = 6);                                 
+  |              ^^^ expected expression                     
+  |                                                          
+  = note: variable declaration using `let` is a statement 
 ```
 
 The `let y = 6` statement does not return a value, so there isn’t anything for
@@ -264,8 +264,8 @@ running this code; the output should look like this:
 
 ```text
 $ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.30 secs
+   Compiling functions v0.1.0 (/projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
      Running `target/debug/functions`
 The value of x is: 5
 ```
