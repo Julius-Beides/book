@@ -48,8 +48,8 @@ Try running this code; you should see the following output:
 
 ```text
 $ cargo run
-   Compiling branches v0.1.0 (file:///projects/branches)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31 secs
+   Compiling branches v0.1.0 (/projects/branches)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
      Running `target/debug/branches`
 condition was true
 ```
@@ -65,8 +65,8 @@ Run the program again, and look at the output:
 
 ```text
 $ cargo run
-   Compiling branches v0.1.0 (file:///projects/branches)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31 secs
+   Compiling branches v0.1.0 (/projects/branches)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
      Running `target/debug/branches`
 condition was false
 ```
@@ -150,8 +150,8 @@ see the following output:
 
 ```text
 $ cargo run
-   Compiling branches v0.1.0 (file:///projects/branches)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31 secs
+   Compiling branches v0.1.0 (/projects/branches)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
      Running `target/debug/branches`
 number is divisible by 3
 ```
@@ -195,8 +195,8 @@ expression. Run this code to see what happens:
 
 ```text
 $ cargo run
-   Compiling branches v0.1.0 (file:///projects/branches)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.30 secs
+   Compiling branches v0.1.0 (/projects/branches)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
      Running `target/debug/branches`
 The value of number is: 5
 ```
@@ -288,8 +288,8 @@ continual loop. Give it a try:
 
 ```text
 $ cargo run
-   Compiling loops v0.1.0 (file:///projects/loops)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.29 secs
+   Compiling loops v0.1.0 (/projects/loops)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.29s
      Running `target/debug/loops`
 again!
 again!
@@ -398,8 +398,8 @@ in the array:
 
 ```text
 $ cargo run
-   Compiling loops v0.1.0 (file:///projects/loops)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.32 secs
+   Compiling loops v0.1.0 (/projects/loops)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.32s
      Running `target/debug/loops`
 the value is: 10
 the value is: 20
