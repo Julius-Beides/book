@@ -59,8 +59,8 @@ using the `cargo run` command:
 
 ```text
 $ cargo run
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.50s
      Running `target/debug/guessing_game`
 Hello, world!
 ```
@@ -290,7 +290,7 @@ If you don’t call `expect`, the program will compile, but you’ll get a warni
 
 ```text
 $ cargo build
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
 warning: unused `std::result::Result` that must be used
   --> src/main.rs:10:5
    |
@@ -324,7 +324,7 @@ the first set of curly brackets holds the first value listed after the format
 string, the second set holds the second value, and so on. Printing multiple
 values in one call to `println!` would look like this:
 
-```rust
+```rust,ignore
 let x = 5;
 let y = 10;
 
@@ -339,8 +339,8 @@ Let’s test the first part of the guessing game. Run it using `cargo run`:
 
 ```text
 $ cargo run
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
+    Finished dev [unoptimized + debuginfo] target(s) in 2.53s
      Running `target/debug/guessing_game`
 Guess the number!
 Please input your guess.
@@ -456,8 +456,8 @@ and build again, you’ll only see two lines of output:
 
 ```text
 $ cargo build
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
+    Finished dev [unoptimized + debuginfo] target(s) in 2.53s
 ```
 
 These lines show Cargo only updates the build with your tiny change to the
@@ -524,8 +524,8 @@ for now, that’s all you need to know. Cargo makes it very easy to reuse
 libraries, so Rustaceans are able to write smaller projects that are assembled
 from a number of packages.
 
-[doccargo]: http://doc.crates.io
-[doccratesio]: http://doc.crates.io/crates-io.html
+[doccargo]: https://doc.rust-lang.org/cargo/
+[doccratesio]: https://doc.rust-lang.org/cargo/reference/publishing.html
 
 ### Generating a Random Number
 
