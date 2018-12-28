@@ -590,8 +590,8 @@ Try running the program a few times:
 
 ```text
 $ cargo run
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.59s
      Running `target/debug/guessing_game`
 Guess the number!
 The secret number is: 7
@@ -599,6 +599,7 @@ Please input your guess.
 4
 You guessed: 4
 $ cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.03s
      Running `target/debug/guessing_game`
 Guess the number!
 The secret number is: 83
@@ -681,18 +682,22 @@ However, the code in Listing 2-4 won’t compile yet. Let’s try it:
 
 ```text
 $ cargo build
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-error[E0308]: mismatched types
-  --> src/main.rs:23:21
-   |
-23 |     match guess.cmp(&secret_number) {
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
+error[E0308]: mismatched types                    
+  --> src/main.rs:21:21                           
+   |                                              
+21 |     match guess.cmp(&secret_number) {        
    |                     ^^^^^^^^^^^^^^ expected struct `std::string::String`, found integral variable
-   |
-   = note: expected type `&std::string::String`
-   = note:    found type `&{integer}`
+   |                                              
+   = note: expected type `&std::string::String`   
+              found type `&{integer}`             
+                                                  
+error: aborting due to previous error             
+                                                  
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `guessing_game`.
 
-error: aborting due to previous error
-Could not compile `guessing_game`.
+To learn more, run the command again with --verbose.
 ```
 
 The core of the error states that there are *mismatched types*. Rust has a
@@ -789,8 +794,8 @@ Let’s run the program now!
 
 ```text
 $ cargo run
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.43 secs
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.43s
      Running `target/debug/guessing_game`
 Guess the number!
 The secret number is: 58
@@ -849,8 +854,8 @@ user can take advantage of that in order to quit, as shown here:
 
 ```text
 $ cargo run
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.50s
      Running `target/debug/guessing_game`
 Guess the number!
 The secret number is: 59
@@ -868,9 +873,8 @@ You guessed: 59
 You win!
 Please input your guess.
 quit
-thread 'main' panicked at 'Please type a number!: ParseIntError { kind: InvalidDigit }', src/libcore/result.rs:785
+thread 'main' panicked at 'Please type a number!: ParseIntError { kind: InvalidDigit }', libcore/result.rs:1009:5
 note: Run with `RUST_BACKTRACE=1` for a backtrace.
-error: Process didn't exit successfully: `target/debug/guess` (exit code: 101)
 ```
 
 Typing `quit` actually quits the game, but so will any other non-number input.
@@ -956,7 +960,7 @@ Now everything in the program should work as expected. Let’s try it:
 
 ```text
 $ cargo run
-   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+   Compiling guessing_game v0.1.0 (/projects/guessing_game)
      Running `target/debug/guessing_game`
 Guess the number!
 The secret number is: 61
